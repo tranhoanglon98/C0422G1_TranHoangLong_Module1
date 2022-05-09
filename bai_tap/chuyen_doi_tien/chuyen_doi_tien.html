@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From currency</th>
+                <th>To currency</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="AM"></td>
+                <td><select id="from">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+                </td>
+                <td><select id="to">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+                </td>
+                <td><button onclick="convert()">Convert</button></td>
+            </tr>
+        </table>
+    <p id="Result">Result:</p>
+    <script src="chuyen_doi_tien.js"></script>
+</body>
+</html>
