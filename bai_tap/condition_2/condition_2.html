@@ -92,6 +92,41 @@
             <tr><td colspan="2"><input type="button" value="Tính" onclick="triangleArea()"></td></tr>
             <tr><td id="result6" colspan="2">Kết quả:</td></tr>
         </table>
+        <br>
+        <hr>
+        <h4>Kiểm tra tuổi</h4>
+        <input type="text" placeholder="Nhập một số nguyên" id="intnum">
+        <input type="button" value="Kiểm tra" onclick="age()">
+        <p id="result7">Kết quả:</p>
+        <br>
+        <hr>
+        <h4>Kiểm tra cạnh của tam giác đều</h4>
+        <p>nhập ba số để kiểm tra</p>
+        <input type="text" id="a3" style="width: 40px">
+        <input type="text" id="b3" style="width: 40px">
+        <input type="text" id="c3" style="width: 40px">
+        <input type="button" onclick="checktriangle()" value="Kiểm tra">
+        <p id="result8">Kết quả:</p>
+        <br>
+        <hr>
+        <h4>Tính tiền điện</h4>
+        <input type="text" placeholder="Nhập số Kwh điện sử dụng" id="kwh">
+        <input type="button" onclick="pay()" value="Tính tiền">
+        <p id="result9">Kết quả:</p>
+        <br>
+        <hr>
+        <h4>Tính thuế thu nhập cá nhân</h4>
+        <input type="text" placeholder="nhập tiền lương" id="salary">
+        <input type="button" onclick="tax()" value="Tính thuế">
+        <p id="result10">Kết quả:</p>
+        <br>
+        <hr>
+        <h4>Tính lãi ngân hàng</h4>
+        <input type="text" placeholder="Nhập số tiền vay" id="loan"><sp>  Đồng</sp><br><br>
+        <input type="text" placeholder="Nhập số tháng vay" id="month"><span>  Tháng</span><br><br>
+        <input type="text" placeholder="lãi suất hàng tháng" id="interestRate"><span>  %</span><br><br>
+        <input type="button" onclick="interest()" value="Tính">
+        <p id="result11">Kết quả:</p>
     </form>
 
 <script src="condition_2.js"></script>

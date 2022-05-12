@@ -65,3 +65,66 @@ function triangleArea() {
     let trianglearea = 0.5*widthtriangle*heighttriangle;
     document.getElementById("result6").innerText = "Kết quả: diện tích tam giác là " + trianglearea;
 }
+function age() {
+    let age = document.getElementById("intnum").value;
+    console.log(age);
+    if(age > 0 && age < 120){
+        document.getElementById("result7").innerText = "Kết quả: " + age + " là tuổi của một người."
+    }
+    else {
+        document.getElementById("result7").innerText = "Kết quả: " + age + " không phải là tuổi của một người."
+    }
+}
+function checktriangle() {
+    let a3 = document.getElementById("a3").value;
+    let b3 = document.getElementById("b3").value;
+    let c3 = document.getElementById("c3").value;
+    if(a3 > 0 && b3 > 0 && c3 > 0 && a3+b3>c3 && a3+c3>b3 && b3+c3>a3){
+        document.getElementById("result8").innerText = "Kết quả: ba số trên là ba cạnh của một tam giác";
+    }
+    else {
+        document.getElementById("result8").innerText = "Kết quả: ba số trên không phải là ba cạnh của một tam giác";
+    }
+}
+function pay() {
+    let kwh = document.getElementById("kwh").value;
+    let pay;
+    if(kwh < 100){
+        pay = 2000 * kwh;
+        document.getElementById("result9").innerText = "Kết quả: " + pay + " Đ";
+    }
+    else{
+        if(kwh < 300){
+            pay = 2500 * kwh;
+            document.getElementById("result9").innerText = "Kết quả: " + pay + " Đ";
+        }
+        else {
+            pay = 3000 * kwh;
+            document.getElementById("result9").innerText = "Kết quả: " + pay + " Đ";
+        }
+    }
+
+}
+function tax() {
+    let salary = document.getElementById("salary").value;
+    let tax;
+    if(salary < 10000000){
+        tax = 0;
+        document.getElementById("result10").innerText = "Kết quả: " + tax + "Đ";
+    }
+    else {
+        tax = salary * 0.1;
+        document.getElementById("result10").innerText = "Kết quả: " + tax + "Đ";
+    }
+}
+function interest() {
+    let debt = parseInt(document.getElementById("loan").value);
+    let month = document.getElementById("month").value;
+    let interestRate = (document.getElementById("interestRate").value)/100;
+    let i = 1;
+    while (i <= month){
+        i += 1;
+        debt = debt + debt * interestRate;
+    }
+    document.getElementById("result11").innerText = "Kết quả: số tiền phải trả sau " + month + " tháng là " + debt + "Đ";
+}
