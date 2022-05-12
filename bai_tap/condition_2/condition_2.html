@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập Cấu Trúc Điều Kiện 2</title>
+    <style>
+        #degrees{
+            background-color: cadetblue;
+            border: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table id="degrees" border="2">
+            <tr><th colspan="2"><---> Chuyển đổi nhiệt độ <---></th></tr>
+            <tr><td><input type="text" placeholder="nhập nhiệt độ" id="value"></td>
+                <td>
+                    <select id="unitdegrees">
+                        <option>Độ C</option>
+                        <option>Độ F</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan="2"><input type="button" onclick="convert()" value="Convert"></td></tr>
+            <tr><td colspan="2"><p id="result1">Kết quả:</p></td></tr>
+        </table>
+        <br>
+        <hr>
+        <table id="feetMeter" border="1">
+            <tr><th colspan="2"><-- Chuyển đổi feet <=> meter --></th></tr>
+            <tr><td><input type="text" placeholder="Nhập chiều dài" id="length"></td>
+                <td>
+                    <select id="lengthunit">
+                    <option>Feet</option>
+                    <option>Meter</option>
+                    </select>
+                 </td>
+            </tr>
+            <tr><td colspan="2"><input type="button" onclick="convertlength()" value="Convert"></td></tr>
+            <tr><td colspan="2"><p id="result2">Kết quả:</p></td></tr>
+        </table>
+        <br>
+        <hr>
+        <table id="area" border="1">
+            <tr><th colspan="2"><-- Tính diện tích hình vuông --></th></tr>
+            <tr>
+               <td><input type="text" placeholder="nhập chiều dài cạnh" id="width"></td>
+               <td><input type="button" value="Tính" onclick="calArea()"></td>
+            </tr>
+            <tr><td id="result3" colspan="2">Kết quả:</td></tr>
+        </table>
+        <br>
+        <hr>
+        <table id="bac1">
+            <tr><th colspan="5"><-- Giải phương trình bậc 1 --></th></tr>
+            <tr>
+                <td><input type="text" style="width: 15px" id="a" placeholder="a">x</td>
+                <td>+</td>
+                <td><input type="text" style="width: 15px" id="b" placeholder="b"></td>
+                <td>=</td>
+                <td>0</td>
+            </tr>
+            <tr><td colspan="5"><input type="button" onclick="solve1()" value="Giải"></td></tr>
+            <tr><td id="result4">Kết quả:</td></tr>
+        </table>
+        <br>
+        <hr>
+        <table id="bac2">
+            <tr><th colspan="7"><-- Giải phương trình bậc 2 --></th></tr>
+            <tr>
+                <td><input type="text" style="width: 15px" id="a2" placeholder="a">x<sup>2</sup></td>
+                <td>+</td>
+                <td><input type="text" style="width: 15px" id="b2" placeholder="b">x</td>
+                <td>+</td>
+                <td><input type="text" style="width: 15px" id="c2" placeholder="c"></td>
+                <td>=</td>
+                <td>0</td>
+            </tr>
+            <tr><td colspan="7"><input type="button" onclick="solve2()" value="Giải"></td></tr>
+            <tr><td colspan="7" id="result5">Kết quả:</td></tr>
+        </table>
+        <br>
+        <hr>
+        <table>
+            <tr><th colspan="2"><-- Tính diện tích hình tam giác vuông--></th></tr>
+            <tr><td colspan="2">Nhập chiều dài hai cạnh góc vuông</td></tr>
+            <tr>
+                <td><input type="text" id="widthtriangle" style="width: 100px"></td>
+                <td><input type="text" id="heighttriangle" style="width: 100px"></td>
+            </tr>
+            <tr><td colspan="2"><input type="button" value="Tính" onclick="triangleArea()"></td></tr>
+            <tr><td id="result6" colspan="2">Kết quả:</td></tr>
+        </table>
+    </form>
+
+<script src="condition_2.js"></script>
+</body>
+</html>

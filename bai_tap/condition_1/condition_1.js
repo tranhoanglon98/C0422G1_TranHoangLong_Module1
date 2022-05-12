@@ -31,10 +31,10 @@ function findmax() {
     let thirdNum = document.getElementById("thirdnum").value;
     let max = firstNum;
     console.log(a)
-    if(secondnum > max){
+    if(secondNum > max){
         max = secondNum;
     }
-    if(thirdnum > max){
+    if(thirdNum > max){
         max = thirdNum;
     }
     document.getElementById("result4").innerText = "Kết quả: Giá trị lớn nhất là: " + max;
@@ -60,5 +60,36 @@ function pointcheck() {
             }
         }
     }
+
+}
+function commission() {
+    let amount = document.getElementById("amount").value;
+    let total = amount * 10000;
+    console.log(total);
+    let result;
+    if(amount < 1000){
+        result = total * 0.1;
+    }
+    else {
+        if(amount < 5000){
+            result = total * 0.15;
+        }
+        else {
+            result = total * 0.2
+        }
+    }
+    document.getElementById("result6").innerText = "Hoa hồng: " + result + "Đ";
+}
+function price() {
+    let viettel = document.getElementById("viettel").value;
+    let min = document.getElementById("minutes").value;
+    let packPrice;
+    switch (viettel) {
+        case "Viettel-1" : packPrice = 500; break;
+        case "Viettel-2" : packPrice = 1000; break;
+        case "Viettel-3" : packPrice = 1500; break;
+    }
+    let price = packPrice * min;
+    document.getElementById("price").innerText = "Giá cươc: " + price + " Đ"
 
 }

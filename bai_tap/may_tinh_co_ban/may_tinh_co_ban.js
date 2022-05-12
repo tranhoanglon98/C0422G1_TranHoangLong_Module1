@@ -1,5 +1,5 @@
 function result() {
-    let result = eval(document.getElementById("scr").value);
+    let result = eval(calculator.screen.value);
     console.log(result);
     calculator.screen.value = result;
 }

@@ -45,7 +45,23 @@
         <p id="result5">Kết quả:</p>
         <br>
         <hr>
-
+        <h4><--- Tính hoa hồng nhận được theo doanh số bán hàng ---></h4>
+        <input type="text" placeholder="số lượng hàng bán được" id="amount">
+        <input type="button" value="tính hoa hồng" onclick="commission()">
+        <p id="result6">Hoa hồng:</p>
+        <br>
+        <hr>
+        <h4><--- Tính cước điện thoại ---></h4>
+        <p>Chọn gói cước.</p>
+        <select id="viettel">
+            <option>Viettel-1</option>
+            <option>Viettel-2</option>
+            <option>Viettel-3</option>
+        </select>
+        <p>Nhập phút gọi trong tháng.</p>
+        <input type="text" id="minutes" placeholder="Phút gọi">
+        <input type="button" value="Tính cước" onclick="price()">
+        <p id="price">Giá cước :</p>
 
         <script src="condition_1.js"></script>
     </form>
