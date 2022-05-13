@@ -10,23 +10,22 @@
     let count = 0;
     let primeNumber = 2;
     let divisor = 0;
-    if(num < 1000){
-    while (count < num){
-        for (let i = 2; i < primeNumber; i++){
-            if( primeNumber % i == 0){
-                divisor++;
-                break;
+    if (num < 1000) {
+        while (count < num) {
+            for (let i = 2; i < primeNumber; i++) {
+                if (primeNumber % i == 0) {
+                    divisor++;
+                    break;
+                }
             }
+            if (divisor == 0) {
+                document.write(primeNumber + "<br>");
+                count++
+            }
+            primeNumber++;
+            divisor = 0;
         }
-        if (divisor == 0){
-            document.write(primeNumber + "<br>");
-            count++
-        }
-        primeNumber++;
-        divisor = 0;
-    }
-    }
-    else {
+    } else {
         alert("nhập số nhỏ thôi nhập nhiều máy lag :V");
     }
 </script>
