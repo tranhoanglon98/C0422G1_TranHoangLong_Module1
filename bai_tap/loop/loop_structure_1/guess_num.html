@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán số</title>
+</head>
+<body>
+<button onclick="play()">CHƠI</button>
+<script>
+    function play() {
+        let range = +prompt("Nhập khoảng mà bạn muốn đoán")
+        let randomNum = Math.floor(Math.random() * (range + 1))
+        console.log(randomNum)
+        for (let i = 1; i < 4; i++) {
+            let guessNum = prompt("nhập số bạn đoán")
+            if (guessNum == randomNum) {
+                alert("bạn đoán đúng")
+                break
+            }
+            if (guessNum < randomNum) {
+                alert("số bạn chọn nhỏ hơn")
+            } else {
+                alert("số bạn chọn lớn hơn")
+            }
+        }
+        alert("bạn đã hết lượt chơi")
+    }
+</script>
+</body>
+</html>

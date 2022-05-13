@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm 1 - 100</title>
+</head>
+<body>
+<h3>Đếm số từ 1 đến 100</h3>
+<button onclick="count()">Đếm</button>
+<p id="result"></p>
+<script>
+    function count() {
+        let result = "";
+        for (let i = 1; i <= 100; i++) {
+            result = result + i + "<br>";
+            console.log(result);
+            document.getElementById("result").innerHTML = result;
+            if (i == 99) {
+                alert("Đã hoàn thành");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop structure - task 7</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            document.write("FizzBuzz" + "<br>")
+        } else {
+            if (i % 3 == 0 || i % 5 == 0) {
+                if (i % 3 == 0) {
+                    document.write("Fizz" + "<br>")
+                } else {
+                    document.write("Buzz" + "<br>")
+                }
+            } else {
+                document.write(i + "<br>")
+            }
+        }
+        // switch (i % 3 == 0 && i % 5 == 0) {
+        //     case true:
+        //         document.write("FizzBuzz" + "<br>");
+        //         break;
+        //     case false: {
+        //         switch (i % 3 == 0) {
+        //             case true:
+        //                 document.write("Fizz" + "<br>");
+        //                 break;
+        //             case false: {
+        //                 switch (i % 5 == 0) {
+        //                     case true:
+        //                         document.write("Buzz" + "<br>");
+        //                         break;
+        //                     default:
+        //                         document.write(i + "<br>")
+        //
+        //                 }
+        //             }
+        //
+        //         }
+        //     }
+        //
+        // }
+    }
+</script>
+</body>
+</html>
