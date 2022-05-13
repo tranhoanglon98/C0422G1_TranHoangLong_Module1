@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp lồng nhau</title>
+</head>
+<body>
+    <script>
+        let table = "<table border='1' cellpadding='5' cellspacing='2'>";
+        let i =1;
+        let j =1;
+        for (;i < 11; i++){
+            table += "<tr>";
+            for ( j =1;j <11; j++){
+                table += "<td>" +i+ " x "+j+ " = " + i*j + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>"
+        document.write(table);
+    </script>
+</body>
+</html>

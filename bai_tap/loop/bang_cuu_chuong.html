@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+        h1 {
+            /*position: relative;*/
+            text-align: center;
+            color: darkorchid;
+        }
+
+        table {
+            background-color: darkorchid;
+            margin: auto;
+            box-shadow: 5px 5px 5px black;
+            text-align: center;
+            color: #dddddd;
+        }
+
+        td:hover {
+            background-color: white;
+            color: darkorchid;
+        }
+    </style>
+</head>
+<body>
+<h1>Bảng Cửu Chương</h1>
+<script>
+    let table = "<table border='1' cellpadding='5' cellspacing='2' style='width: 1000px'>";
+    let i = 1;
+    let j = 1;
+    for (; i < 11; i++) {
+        table += "<tr>";
+        for (j = 1; j < 11; j++) {
+            table += "<td>" + i + " x " + j + " = " + i * j + "</td>";
+        }
+        table += "</tr>";
+    }
+    table += "</table>"
+    document.write(table);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for loop</title>
+</head>
+<body>
+    <h1>for looooooooooooooooop</h1>
+    <p id="write"></p>
+    <script>
+      let  i = 0;
+      let write = "";
+      for(i=0; i<5;i++){
+          write += "this number is " + i + "<br>";
+          document.getElementById("write").innerHTML = write;
+      }
+      let randomNum = +prompt("Nhập một số bất kỳ lớn hơn 0");
+      let ii = 1;
+      let sum = 0;
+      for (ii = 1; ii <= randomNum; ii++){
+          sum += ii;
+      }
+      alert("Tổng các số từ 1 đến " + randomNum + " là " + sum);
+    </script>
+</body>
+</html>
