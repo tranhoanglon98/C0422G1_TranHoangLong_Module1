@@ -7,12 +7,14 @@
 <body>
 <script>
     let temp = prompt("nhập vào nhiệt độ hiện tại")
-    if (temp > 100) {
-        alert("Quá nóng, hãy giảm nhiệt độ xuống")
+    while(temp < 20 || temp > 100) {
+        if(temp < 20) {
+            temp = prompt("Tăng nhiệt độ");
+        } else {
+            temp = prompt("Giảm nhiệt độ");
+        }
     }
-    if (temp < 20) {
-        alert("hơi lạnh, hãy tăng nhiệt độ lên")
-    }
+    document.write("bạn điều chỉnh nhiệt độ hợp lí");
 </script>
 </body>
 </html>

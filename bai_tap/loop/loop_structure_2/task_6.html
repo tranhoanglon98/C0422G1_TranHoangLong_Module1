@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart</title>
+</head>
+<body>
+<script>
+    let star = "*"
+    let space = ""
+    let line = ""
+    let a = 0
+    for (let i = 1; i <= 13; i++) {
+        if (i > 5) {
+
+            for (let j = 0; j < (16 - 2 * a); j++) {
+                line += star
+            }
+            line = space + line
+            document.write(line + "<br>")
+            space += "&nbsp&nbsp"
+            line = ""
+            a++
+        } else {
+            if (i > 3) {
+                for (j = 1; j <= 16; j++) {
+                    line += star
+                }
+                document.write(line + "<br>")
+                line = ''
+            }
+            else {
+                for (let j = 1; j <= 16; j++) {
+                    if(!((i==1&&(j==1||j==2||(j>=7&&j<=10)||j>=15))
+                    ||(i==2&&(j==1||j==8||j==9||j==16)))){
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp;&nbsp");
+                    }
+                } document.write("<br>")
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
