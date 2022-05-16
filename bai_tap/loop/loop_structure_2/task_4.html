@@ -8,26 +8,16 @@
 <script>
     let width = prompt("nhập chiều dài hình chữ nhật")
     let height = prompt("nhập chiều rộng hình chữ nhật")
-    let line = ""
-    for (let i =1; i<= height;i++){
-        if(i == 1 || i == height){
-            for (let j =1; j<= width;j++){
-                line += "*"
+    for (let i =1;i<= height ;i++){
+        for (let j = 1;j<=width;j++){
+            if(i == 1 || i == height || j == 1 || j == width){
+                document.write("*")
             }
-            document.write(line + "<br>")
-            line=""
+            else {
+                document.write("&nbsp&nbsp")
+            }
         }
-        else {
-            for (let j = 1;j<=width;j++){
-                if(j==1||j==width){
-                    line += "*"
-                }
-                else {
-                    line += "&nbsp&nbsp"
-                }
-            }document.write(line +"<br>")
-            line=""
-        }
+        document.write("<br>")
     }
 </script>
 </body>
