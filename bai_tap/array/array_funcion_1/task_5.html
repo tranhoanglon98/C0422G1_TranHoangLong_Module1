@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số lượng số nguyên âm trong mảng</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi")
+    let count = 0
+    let str2 = ["u", "e", "o", "a", "i","U","E","O","A","I"]
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < str2.length; j++) {
+            if (str[i] == str2[j]) {
+                count++
+            }
+        }
+    }
+    document.write("số lượng nguyên âm ở trong chuổi là: " + count)
+</script>
+</body>
+</html>

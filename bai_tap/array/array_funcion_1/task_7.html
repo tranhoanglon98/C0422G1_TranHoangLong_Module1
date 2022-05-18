@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra và xóa phần tử</title>
+</head>
+<body>
+<script>
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt("nhập vào giá trị của phần tử " + i + " của mảng")
+    }
+    document.write(arr + "<br>")
+    let check = prompt("Nhập vào số muốn kiểm tra")
+    for (let i = 0; i < 10; i++) {
+        if (check == arr[i]) {
+           for (let j =i ;j<10;j++){
+               arr[j]=arr[j+1]
+           }
+           arr[arr.length-1]=0
+            i -=1
+        }
+    }
+    document.write(arr + "<br>")
+
+    //    "hoặc"
+    // for (let i = arr.length-1; i >=0; i--) {
+    //     if (check == arr[i]) {
+    //         arr.splice(i,1)
+    //         arr.push(0)
+    //     }
+    // }
+    // document.write(arr + "<br>")
+</script>
+</body>
+</html>

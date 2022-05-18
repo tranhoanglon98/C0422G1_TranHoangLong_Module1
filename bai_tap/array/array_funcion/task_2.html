@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chèn "-" vào giữa hai số chẵn</title>
+</head>
+<body>
+<script>
+    let arr =[]
+    let num = prompt("Nhập vào một số ")
+    let length = num.length
+    document.write(num + "<br>")
+    for (let i = 0; i <length; i++) {
+        arr[i] = num[i]
+    }
+    for (let i = length-1; i >0 ; i--) {
+        if(arr[i]%2==0 && arr[i-1]%2==0){
+            arr.splice(i,0,"-")
+        }
+    }
+    document.write(arr.join("") + "<br>")
+
+</script>
+</body>
+</html>

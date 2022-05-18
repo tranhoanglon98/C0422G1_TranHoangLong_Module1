@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập giá trị phần tử của mảng" id="input" style="width: 200px" name="input">
+<button type="submit" onclick="add()">Add</button>
+<button type="button" onclick="display()">Display</button>
+<button type="button" onclick="reverse()">Reverse</button>
+<p id="result">Element:</p>
+<p id="reverse">Reverse:</p>
+<input type="text" placeholder="Nhập giá trị cần tìm kiếm" id="find">
+<button type="button" onclick="search()">search</button>
+<p id="result1">Result:</p>
+<button type="button" onclick="findMax()">Find Max</button>
+<p id="result2">Max =</p>
+<script>
+    let array = [];
+    let index = 0;
+    let result = "";
+
+    function add() {
+        array[index] = document.getElementById("input").value
+        alert("bạn đã thêm " + array[index] + " vào vị trí " + index)
+        index++
+        document.getElementById("input").value = ''
+
+    }
+
+    function display() {
+        for (index = 0; index < array.length; index++) {
+            result += "Element: " + index + " = " + array[index] + "<br>" + "<hr>"
+        }
+        document.getElementById("result").innerHTML = result
+    }
+
+    function reverse() {
+        let reverseArr = []
+        let lastIndex = array.length - 1
+        for (index = 0; index < array.length; index++) {
+            reverseArr[lastIndex] = array[index]
+            lastIndex--
+        }
+        array = reverseArr
+        document.getElementById("reverse").innerHTML = 'Reverse: ' + array.join('-')
+    }
+
+    function search() {
+        let findValue = document.getElementById("find").value
+        for (index = 0; index < array.length; index++) {
+            if (array[index] == findValue) {
+                document.getElementById("result1").innerText = "Result: " + findValue + " nằm ở vị trí " + index + " trong mảng"
+            }
+        }
+    }
+
+    function findMax() {
+        let max = array[0]
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] > max){
+                max = array[i]
+                index = i
+            }
+        }
+    document.getElementById("result2").innerText = "Max = " + max + " tại vị trí " + index
+    }
+
+
+</script>
+</body>
+</html>

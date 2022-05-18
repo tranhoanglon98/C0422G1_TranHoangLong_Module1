@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập số lượng phần tử của mảng")
+    let array = []
+    for (let i = 0; i < num; i++) {
+        array[i] = prompt("nhập giá trị của phần tử " + i)
+    }
+    document.write("array = [ " + array + " ]" + "<br>")
+    let firstIndex = 0
+    let lastIndex = num - 1
+    while (firstIndex < lastIndex) {
+        let a = array[firstIndex]
+        array[firstIndex] = array[lastIndex]
+        array[lastIndex] = a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        firstIndex++
+        lastIndex--
+    }
+    document.write("array = [ " + array + " ]")
+</script>
+</body>
+</html>

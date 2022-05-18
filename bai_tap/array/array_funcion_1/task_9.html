@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối mảng</title>
+</head>
+<body>
+<script>
+    let a = []
+    let b = []
+    let c = []
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt("nhập vào giá trị của phần tử " + i + " của mảng a")
+        b[i] = prompt("nhập vào giá trị của phần tử " + i + " của mảng b")
+    }
+    document.write("mảng a = [ " + a + " ]" + "<br>")
+    document.write("mảng c = [ " + b + " ]" + "<br>")
+    for (let i =0; i<20;i++){
+        if(i<10){
+            c[i]=a[i]
+        }else {
+            c[i]=b[i-10]
+        }
+    }
+    document.write("mảng c = [ " + c + " ]" + "<br>")
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max và trung bình</title>
+</head>
+<body>
+<script>
+    let arr = [12, 25254, 574, 3, 97, 154, 3474, 52, 6987, 22]
+    let max = arr[0]
+    let sum = 0
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+            index = i
+        }
+        sum += arr[i]
+    }
+    document.write("phần tử lớn nhất là " + max + " nằm ở vị trí " + index + "<br>")
+    document.write("Giá trị trung bình các phần tử trong mảng là: " + sum/arr.length)
+</script>
+</body>
+</html>

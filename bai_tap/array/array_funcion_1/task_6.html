@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử có nằm trong mảng không</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let a = 0
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt("nhập vào giá trị của phần tử " + i + " của mảng")
+    }
+    let check = prompt("Nhập vào số muốn kiểm tra")
+    for (let i = 0; i < 10; i++) {
+        if (check == arr[i]) {
+            a++
+            alert(check + " nằm trong mảng")
+            break
+        }
+    }
+    if (a == 0) {
+        alert(check + " không nằm trong mảng")
+    }
+</script>
+</body>
+</html>

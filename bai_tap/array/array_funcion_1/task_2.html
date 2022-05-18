@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max trong phần tử và vị trí của nó</title>
+</head>
+<body>
+<script>
+    let arr = [12, 25254, 574, 3, 97, 154, 3474, 52, 6987, 22]
+    let max = arr[0]
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+            index = i
+        }
+    }
+    document.write("phần tử lớn nhất là " + max + " nằm ở vị trí " + index)
+</script>
+</body>
+</html>
