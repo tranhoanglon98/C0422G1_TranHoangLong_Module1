@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm ký tự số trong mảng</title>
+</head>
+<body>
+<script>
+    let array = []
+    let count = 0
+    let length = prompt("nhập kích thước của mảng")
+    for (let i = 0; i < length; i++) {
+        array[i] = prompt("nhập vào giá trị phần tử " + i)
+    }
+    document.write("array = [" + array + " ]" + "<br>")
+    for (let i = 0; i < length; i++) {
+        if ((array[i] / array[i]) == 1) {
+            count++
+        }
+    }
+    document.write("số lượng ký tự số trong mảng là " + count)
+</script>
+</body>
+</html>

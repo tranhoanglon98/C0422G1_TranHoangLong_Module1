@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ngược</title>
+</head>
+<body>
+<script>
+    let array = []
+    let str = prompt("nhập vào một chuỗi ")
+    for (let i = 0; i < str.length; i++) {
+        array[i] = str[i]
+    }
+    document.write(str + "<br>")
+    document.write("In ngược:" + "<br>")
+    for (let i = array.length - 1; i >= 0; i--) {
+        document.write(array[i])
+    }
+</script>
+</body>
+</html>

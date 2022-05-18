@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh hai chuỗi</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("nhập chuỗi thứ nhất")
+    let str2 = prompt("nhập chuỗi thứ hai")
+    let count = 0
+    document.write("string 1 :" + str1 + "<br>")
+    document.write("string 2 :" + str2 + "<br>")
+    if (str1.length == str2.length) {
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] != str2[i]) {
+                document.write("hai chuỗi bạn nhập không giống nhau")
+                count++
+                break
+            }
+        }
+        if (count == 0) {
+            document.write("hai chuỗi bạn nhập giống nhau")
+        }
+    } else {
+        document.write("hai chuỗi bạn nhập không giống nhau")
+    }
+</script>
+</body>
+</html>

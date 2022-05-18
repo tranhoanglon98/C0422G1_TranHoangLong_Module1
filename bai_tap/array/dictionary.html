@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh - Việt</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập từ tiếng anh muốn  dịch" style="width: 200px" id="from">
+<button type="button" onclick="dictionary()">Dịch</button>
+<p id="result">Result:</p>
+<script>
+    let eng = ["black", "blue", "red", "green", "yellow", "pink", "brown","huy"]
+    let vie = ["màu đen", "màu xanh dương", "màu đỏ", "màu xanh lá cây", "màu vàng", "màu hồng", "màu nâu","óc chó"]
+    let count =0
+    console.log(eng)
+    function dictionary() {
+        let check = document.getElementById("from").value
+        for (let i = 0; i<eng.length;i++){
+            console.log(check)
+            if(check == eng[i]){
+                document.getElementById("result").innerText = "Result: " + vie[i]
+                count++
+                break
+            }
+        }if(count == 0){
+            document.getElementById("result").innerText = "Result: Từ bạn nhập chưa có trong từ điển"
+        }
+    }
+</script>
+</body>
+</html>

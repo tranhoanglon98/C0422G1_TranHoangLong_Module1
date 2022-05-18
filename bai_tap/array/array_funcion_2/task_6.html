@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thay thế</title>
+</head>
+<body>
+<script>
+    let length = prompt("nhập chiều dài mảng")
+    let array = []
+    for (let i = 0; i < length; i++) {
+        array[i] = prompt("nhập giá trị phần tử " + i + " của mảng")
+    }
+    document.write(array + "<br>")
+    for (let i = 0; i < length; i++) {
+        if (array[i] == "-") {
+            array[i] = "_"
+        }
+    }
+    document.write(array)
+</script>
+</body>
+</html>

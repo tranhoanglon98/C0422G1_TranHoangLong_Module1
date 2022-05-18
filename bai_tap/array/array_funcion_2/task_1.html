@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo mảng hai chiều</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let arr1 = []
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            arr1[j] = prompt("nhập giá trị của phần từ arr[" + i + "][" + j + "]")
+        }
+        arr[i] = arr1
+    }
+    for (let i = 0; i < 4; i++) {
+        document.write('" row ' + i + ' "' + "<br>")
+        for (let j = 0; j < 4; j++) {
+            document.write('" ' + arr[i][j] + ' "' + "<br>")
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
