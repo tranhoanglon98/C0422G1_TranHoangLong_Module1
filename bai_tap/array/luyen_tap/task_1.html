@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm ký tự trong chuỗi</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập một chuỗi")
+    let check = prompt("Nhập ký tự muốn đếm trong chuỗi")
+    let count = 0
+    document.write("string" + str + "<br>")
+    for (let i = 0; i < str.length; i++) {
+        if (check == str[i]) {
+            count++
+        }
+    }
+    document.write("Trong chuỗi có " + count + " ký tự " + check)
+</script>
+</body>
+</html>

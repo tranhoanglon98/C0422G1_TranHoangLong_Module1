@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = prompt("nhập số thứ nhất")
+    let num2 = prompt("nhập số thứ hai")
+    document.write("number 1 = " + num1 + ", number 2 = " + num2 + "<br>")
+    let arr = convertNum(num1, num2)
+
+    function convertNum(a, b) {
+        let c = a
+        a = b
+        b = c
+        return [a, b]
+    }
+
+    document.write("number 1 = " + arr[0] + ", number 2 = " + arr[1])
+
+</script>
+</body>
+</html>

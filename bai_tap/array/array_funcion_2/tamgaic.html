@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>tu dien</title>
 </head>
 <body>
-
+<h>Tìm kiếm</h>
+<input type="text" id="text">
+<button type="button" onclick="dich()" id="a">Dịch</button>
+<h id="result"></h>
+<script>
+    let n= parseInt(prompt("nhap do dai cua mang "))
+    let arr= []
+    for(i=0;i<n; i++){
+        arr[i]= prompt("nhap mang ")
+    } document.write(arr +"<br>")
+    for (i=0; i<arr.length; i++){
+        if( arr[i]== "-"){
+            arr[i]= "_"
+        }
+    } document.write('mang thay doi'+ arr)
+</script>
 </body>
 </html>
-<script>
-    for (let i = 1; i < 9; i++) {
-        
-    }
-</script>

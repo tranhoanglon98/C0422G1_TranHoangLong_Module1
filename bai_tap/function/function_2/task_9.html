@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["a", "b", "c", "d", "g", "h", "w", "o", "a", "e", "a"]
+    let character = prompt("nhập vào một ký tự")
+
+    function checkCharacterInArray(x, y) {
+        let count = 0
+        for (let i = 0; i < x.length; i++) {
+            if (x[i] === y) {
+                count++
+            }
+        }
+        if (count == 0) {
+            return -1
+        } else {
+            return count
+        }
+    }
+
+    document.write(checkCharacterInArray(arr, character))
+</script>
+</body>
+</html>

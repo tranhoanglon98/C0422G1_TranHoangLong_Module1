@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<span>arr1 = [7, 12, 6, 9, 20, 56, 89]</span>
+<span><button type="button" onclick="minArray(arr1)">Tìm min</button></span>
+<p id="arr1">Min = </p>
+<hr>
+<span>arr2 = [3, 5, 1, 8, -3, 7, 8]</span>
+<span><button type="button" onclick="minArray(arr2)">Tìm min</button></span>
+<p id="arr2">Min =</p>
+<hr>
+<span>arr3 = []</span>
+<span><button type="button" onclick="minArray(arr3)">Tìm min</button></span>
+<p id="arr3">Min =</p>
+<hr>
+<span>arr4 = [0, 0, 0, 0, 0, 0]</span>
+<span><button type="button" onclick="minArray(arr4)">Tìm min</button></span>
+<p id="arr4">Min =</p>
+<hr>
+<script>
+    function minArray(arr) {
+        let min = arr[0]
+        for(let i =0;i<arr.length;i++){
+            if(arr[i]<min){
+                arr[i]=min
+            }
+        }
+      switch (arr) {
+            case arr1: document.getElementById("arr1").innerText="Min = " + min;break
+            case arr2: document.getElementById("arr2").innerText="Min = " + min;break
+            case arr3: document.getElementById("arr3").innerText="Min = " + min;break
+            case arr4: document.getElementById("arr4").innerText="Min = " + min;break
+
+      }
+    }
+    let arr1 = [7, 12, 6, 9, 20, 56, 89]
+    let arr2 = [3, 5, 1, 8, -3, 7, 8]
+    let arr3 = []
+    let arr4 = [0, 0, 0, 0, 0, 0]
+
+</script>
+</body>
+</html>

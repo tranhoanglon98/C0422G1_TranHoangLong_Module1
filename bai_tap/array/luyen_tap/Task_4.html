@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lần xuất hiện của các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let array = []
+    let count =1
+    let length = prompt("Nhập vào độ dài của mảng")
+    for (let i = 0; i < length; i++) {
+        array[i] = prompt("nhập vào một số nguyên")
+    }
+    document.write("array = [" +array + "]" + "<br>")//111256155   1''256''55
+    array.sort(function (a,b) {
+return a-b
+    })
+    for (let i = 0; i < length; i++) {
+        if(array[i] != ""){
+            for(let j = i+1;j<length;j++){
+                if(array[i] == array[j]){
+                    count++
+                    array[j]=""
+                }
+            }document.write(array[i] +": xuất hiện " + count + " lần" + "<br>")
+            count=1
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe ", "Regulus"]
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function findConstellation(str) {
+        let flag = false
+        for (let i = 0; i < stars.length; i++) {
+            if (str == stars[i]) {
+                flag = true
+                alert(stars[i] + " nằm trong chòm sao " + constellation[i])
+            }
+        }
+        if (flag == false) {
+            alert("không tìm thấy chòm sao tương ứng")
+        }
+    }
+
+    let str = prompt("nhập tên ngôi sao")
+    findConstellation(str)
+</script>
+</body>
+</html>

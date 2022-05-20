@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci & số nguyên tố</title>
+</head>
+<body>
+<script>
+    let fibonacci = 1
+    let a = 0
+    let count = 0
+    while (fibonacci < 10000) {
+        a = fibonacci - a
+        if (fibonacci + a >= 10000) {
+            break
+        }
+        fibonacci += a
+        console.log(fibonacci)
+        for (let i = 2; i < fibonacci; i++) {
+            if (fibonacci % i == 0) {
+                count++
+                break
+            }
+        }
+        if (count == 0) {
+            document.write(fibonacci + "<br>")
+        }
+        count = 0
+    }
+</script>
+</body>
+</html>

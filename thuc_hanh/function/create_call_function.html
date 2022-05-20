@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function processAswer(answer) {
+        let result = '';
+        if (answer) {
+            result ="Excellent. We'll pay a nice game of chess.";
+        } else {
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm("Shall we pay a game?");
+    let answer = processAswer(confirmAnswer);
+    alert(answer);
+</script>
+
+</body>
+</html>

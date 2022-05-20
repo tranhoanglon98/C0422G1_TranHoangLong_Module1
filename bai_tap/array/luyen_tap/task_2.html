@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script>
+    let num = +prompt("nhập một số")
+    let s = 0
+    document.write("S = 1 + 1/(2^3) + ..... + 1/(n^3) " + "<br>")
+    document.write("n = " + num + "<br>")
+    for (let i = 1; i <= num; i++) {
+        s += 1 / (Math.pow(i, 3))
+    }
+    document.write("S = " + s)
+</script>
+</body>
+</html>
