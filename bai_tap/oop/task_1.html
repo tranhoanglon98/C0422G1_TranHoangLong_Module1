@@ -5,6 +5,7 @@
     <title>Recrangle</title>
 </head>
 <body>
+<canvas id="canvas" width="1080px" height="720px"></canvas>
 <script>
     class Rectangle {
         constructor(width, height) {
@@ -19,6 +20,12 @@
         getPerimeter() {
             return 2 * (this.width + this.height)
         }
+
+        drawRectangle() {
+            let rectangle = document.getElementById("canvas").getContext("2d")
+            rectangle.fillStyle = '#778544'
+            rectangle.fillRect(0, 0, this.width, this.height)
+        }
     }
 
     let width = +prompt("Nhập chiều dài hình chữ nhật")
@@ -27,6 +34,7 @@
     let area = rectangle.getArea()
     let perimeter = rectangle.getPerimeter()
     alert("Diện tích = " + area + ". Chu vi = " + perimeter)
+    rectangle.drawRectangle()
 
 </script>
 </body>

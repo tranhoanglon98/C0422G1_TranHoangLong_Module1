@@ -17,13 +17,25 @@
         }
     }
 
+    function randomColor() {
+        return Math.floor(Math.random() * 255)
+    }
+
     function createCircle() {
+        let color = "rgb(" + randomColor() + " ," + randomColor() + " , " + randomColor() + " )"
         let canvas = document.getElementById("canvas").getContext("2d")
-        let circle = new Circle(540, 250, 200)
+        let radius = Math.floor(Math.random() * 100)
+        let x = Math.random() * window.innerWidth
+        let y = Math.random() * window.innerHeight
+        let circle = new Circle(x, y, radius)
         canvas.beginPath()
         canvas.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI)
+        canvas.fillStyle = color
         canvas.fill()
     }
 
-    createCircle()
+    for (let i = 0; i < 40; i++) {
+        createCircle()
+    }
+
 </script>
