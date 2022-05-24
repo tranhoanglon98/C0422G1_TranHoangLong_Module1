@@ -6,15 +6,14 @@
 </head>
 <body>
 <script>
-    function letFactorial() {
-        let num = +prompt("nhập số muốn tính giai thừa")
-        let factorial = num
-        for (let i = 1; i < num; i++) {
+    function letFactorial(n) {
+        let factorial = n
+        for (let i = 1; i < n; i++) {
             factorial *= i
         }
-        alert(num + "! = " + factorial)
+        alert(n + "! = " + factorial)
     }
-
+    let num = +prompt("nhập số muốn tính giai thừa")
     letFactorial()
 </script>
 </body>

@@ -9,10 +9,10 @@
     let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe ", "Regulus"]
     let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
 
-    function findConstellation(str) {
+    function findConstellation(a) {
         let flag = false
         for (let i = 0; i < stars.length; i++) {
-            if (str == stars[i]) {
+            if (a == stars[i]) {
                 flag = true
                 alert(stars[i] + " nằm trong chòm sao " + constellation[i])
             }

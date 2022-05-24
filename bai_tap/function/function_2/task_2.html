@@ -6,13 +6,12 @@
 </head>
 <body>
 <script>
-    function circlePrimeterAndArea() {
-        let radius = +prompt("nhập bán kính hình tròn")
-        alert("chu vi hình tròn bán kính " + radius + " là " + 2 * 3.14 * radius)
-        alert("diện tích hình tròn bán kính " + radius + " là " + 3.14 * radius * radius)
+    function circlePrimeterAndArea(r) {
+        alert("chu vi hình tròn bán kính " + r + " là " + 2 * 3.14 * r)
+        alert("diện tích hình tròn bán kính " + r + " là " + 3.14 * r * r)
     }
-
-    circlePrimeterAndArea()
+    let radius = +prompt("nhập bán kính hình tròn")
+    circlePrimeterAndArea(radius)
 </script>
 </body>
 </html>

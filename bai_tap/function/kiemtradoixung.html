@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let str = prompt("nhập chuỗi muốn kiểm tra")
+    alert(kiemTraDoiXung(str))
+    function kiemTraDoiXung(str) {
+        let result = "";
+        for (let i=0;i < str.length/2;i++){
+            if(str[i] == str[str.length-1-i]) {
+                result = "đối xứng";
+            }
+            else {
+                return "Không đối xứng"
+            }
+        }
+        return  result;
+    }
+</script>

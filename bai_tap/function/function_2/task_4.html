@@ -6,14 +6,16 @@
 </head>
 <body>
 <script>
-    function checkNum() {
-        let num = prompt("nhập vào ký tự muốn kiểm tra")
-        if ((num / num) == 1) {
+    function checkNum(n) {
+        if ((n / n) == 1) {
             alert("ký tự bạn vừa nhập là ký tự số")
-        } else {
+        }else if(n == 0){
+            alert("ký tự bạn vừa nhập là ký tự số")
+        }else {
             alert("ký tự bạn vừa nhập không phải là ký tự số")
         }
     }
+    let num = prompt("nhập vào ký tự muốn kiểm tra")
 
     checkNum()
 </script>

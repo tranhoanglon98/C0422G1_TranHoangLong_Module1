@@ -6,19 +6,68 @@
 </head>
 <body>
 <h1>Case study</h1>
+<br>
+<h2>Yêu cầu 1(Vẽ hình)</h2>
+<!--                        bài 1                       -->
 <h3>Bài 1:vẽ hình chữ nhật rỗng m*n.</h3>
 <p>Nhập chiều dài và chiều rộng của hình chữ nhật</p>
 <input type="text" placeholder="chiều dài" id="width" style="width: 65px">
 <input type="text" placeholder="chiều rộng" id="height" style="width: 65px;">
-<button type="button" onclick="draw()">Vẽ</button>
+<button type="button" onclick="drawRectangle()">Vẽ</button>
 <p id="result1"></p>
 <hr>
+<!--                        bài 2                       -->
 <h3>Bài 2: Vẽ tam giác vuông cân rỗng chiều cao h.</h3>
 <p>Nhập chiều cao h.</p>
 <input type="text" style="width: 65px;" id="triangle" placeholder="chiều cao">
 <button type="button" onclick="drawTriangle()">Vẽ</button>
 <p id="result2"></p>
+<hr>
+<!--                        bài 3                       -->
+<h3>Bài 3: vẽ tam giác cân đặc chiều cao h</h3>
+<p>Nhập chiều cao h.</p>
+<input type="text" id="isoscelesTriangle" placeholder="Chiều cao" style="width: 65px">
+<button type="button" onclick="drawIsoscelesTriangle()">Vẽ</button>
+<p id="result3"></p>
+<hr>
+<!--                        bài 4                       -->
+<h3>Bài 4: vẽ tam giác cân rỗng chiều cao h</h3>
+<p>Nhập chiều cao h.</p>
+<input type="text" id="isoscelesTriangle2" placeholder="Chiều cao" style="width: 65px">
+<button type="button" onclick="drawIsoscelesTriangle2()">Vẽ</button>
+<p id="result4"></p>
+<hr>
+<!--                yêu cầu 2 (if & switch case)                -->
+<h2>Yêu cầu 2 (if và switch case).</h2>
+<!--                        bài 1                       -->
+<h3>Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng.</h3>
+<input type="text" placeholder="Nhập lương (VND)" id="salary">
+<button type="button" onclick="salaryCalculation()">Tính toán</button>
+<p id="tax">Thuế thu nhập cá nhân:</p>
+<p id="netSalary">Lương ròng:</p>
+<hr>
+<!--                        bài 3                       -->
+<h3>Bài 2: Kiểm tra ký tự có phải là nguyên âm không.</h3>
+<input type="text" placeholder="Nhập ký tự muốn kiểm tra" style="width: 170px;" oninput="vowelCheck()"
+       onchange="vowelCheck()" id="textInput">
+<p id="result5"></p>
+<hr>
+<!--                Yêu cầu 3 (Mảng và loop)                -->
+<h2>Yêu cầu 3 (Mảng và loop).</h2>
+<!--                        bài 1                       -->
 
-<script src="case_study.js"></script>
+<h3>Bài 1:Xây dựng mảng b là prefix sums của mảng a.</h3>
+<p>Nhập chiều dài của mảng a</p>
+<input type="text" placeholder="a length" style="width: 50px" id="aLength">
+<button type="submit" onclick="submitLength('aLength')">Nhập</button>
+<p>Nhập phần tử của mảng a là số nguyên</p>
+<table id="tableTask1"></table>
+<p id="arrB"></p>
+<hr>
+<!--                        bài 2                       -->
+<h3>Bài 2: Tìm phần tử xuất hiện trong mảng B nhưng không xuất hiện trong mảng A.</h3>
+
 </body>
 </html>
+<script src="case_study.js"></script>
+

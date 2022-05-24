@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Sản Phẩm</title>
+    <style>
+        body {
+            font-family: "Adobe Song Std L";
+            font-size: 24px;
+        }
+        div{
+            margin:50px auto;
+            width: 500px;
+            padding: 40px;
+            background-color: cadetblue;
+            text-align: center;
+            box-shadow: 5px 5px 5px #000000;
+
+        }
+        td{
+            color: black;
+            text-align: left;
+        }
+        button{
+            background-color: forestgreen;
+            border: 0px;
+            padding: 5px;
+            width: 60px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: black;
+            color: green;
+
+        }
+        table{
+            margin: auto;
+            border-collapse: collapse;
+        }
+        tr:nth-child(even){
+            background-color: darkcyan;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+<h3>Add New Product</h3>
+<input type="text" placeholder="New Product" style="width: 200px;background-color: whitesmoke" id="newProduct">
+<button type="submit" onclick="addProduct()">Add</button>
+<h3>Display All Product</h3>
+
+<table id="displayTable">
+
+</table>
+</div>
+
+
+<script src="quan_ly_san_pham.js"></script>
+</body>
+</html>
