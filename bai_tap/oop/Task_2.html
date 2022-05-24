@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius
+        }
+
+        getFahrenheit() {
+            return (this.celsius - 32) / 1.8
+        }
+
+        getKenvin() {
+            return (this.celsius + 273.15)
+        }
+    }
+
+    let temp = +prompt("Nhập độ C")
+    let temperature = new Temperature(temp)
+    alert(temp + " độ C = " + temperature.getFahrenheit() + " độ F")
+    alert(temp + " độ C = " + temperature.getKenvin() + " độ K")
+</script>
+</body>
+</html>
