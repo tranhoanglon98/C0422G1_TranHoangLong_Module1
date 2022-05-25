@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đơn GIản</title>
+</head>
+<body>
+<div id="game"></div>
+</body>
+</html>
+<script>
+    class Hero {
+        constructor(imgae, top, left, size, speed) {
+            this.image = imgae
+            this.top = top
+            this.left = left
+            this.size = size
+            this.speed = speed
+
+        }
+
+        setSpeed(speed) {
+            this.speed = speed
+        }
+
+        getHerolement() {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveRight() {
+            this.left += this.speed
+        }
+
+        moveLeft() {
+            this.left -= this.speed
+        }
+
+        moveUp() {
+            this.top -= this.speed
+        }
+
+        moveDown() {
+            this.top += this.speed
+        }
+    }
+
+    let superHero = new Hero('sieuNhanGao.png', 20, 20, 200, 20)
+    superHero.setSpeed(30)
+
+    function start() {
+        if (superHero.left < window.innerWidth - superHero.size) {
+            superHero.moveRight();
+            superHero.moveDown()
+        }
+        document.getElementById('game').innerHTML = superHero.getHerolement();
+        setTimeout(start, 500)
+    }
+
+    start();
+
+</script>

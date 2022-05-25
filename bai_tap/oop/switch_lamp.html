@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status
+        }
+
+        getStatus() {
+            return this.status
+        }
+
+        setStatus(status) {
+            this.status = status
+        }
+
+        electricLampStatus() {
+            if (this.status) {
+                document.write("Đèn bật" + "<br>")
+            } else {
+                document.write("Đèn tắt" + "<br>")
+            }
+        }
+    }
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status
+            this.lamp = lamp
+        }
+
+        getStatus() {
+            return this.status
+        }
+
+        setStatus(status) {
+            this.status = status
+        }
+
+        getLamp() {
+            return this.lamp
+        }
+
+        setLamp(lamp) {
+            this.lamp = lamp
+        }
+
+        connectToLamp(ElectricLamp) {
+            return this.lamp = ElectricLamp
+        }
+
+        switchOn() {
+            this.lamp.setStatus(true);
+            this.lamp.electricLampStatus()
+            return this.status = true;
+
+        }
+
+        switchOff() {
+            this.lamp.setStatus(false);
+            this.lamp.electricLampStatus()
+            return this.status = false;
+        }
+
+    }
+
+
+    let electricLamp = new ElectricLamp(false)
+    let switchButton = new SwitchButton(false, electricLamp)
+    for (let i = 1; i <= 10; i++) {
+        document.write("Lần " + i + "<br>")
+        document.write("Bật đèn: " + "<br>")
+        switchButton.switchOn()
+        document.write("<br>")
+        document.write("Tắt đèn: " + "<br>")
+        switchButton.switchOff()
+        document.write("<hr>")
+    }
+
+</script>
+</body>
+</html>

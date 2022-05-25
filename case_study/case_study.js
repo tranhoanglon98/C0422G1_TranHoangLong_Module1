@@ -15,6 +15,7 @@ function drawRectangle() {
     }
     document.getElementById("result1").innerHTML = result
 }
+
 // Vẽ tam giác
 function drawTriangle() {
     let result = ""
@@ -31,6 +32,7 @@ function drawTriangle() {
     }
     document.getElementById("result2").innerHTML = result
 }
+
 //Vẽ tam giác cân đặc
 function drawIsoscelesTriangle() {
     let result = ""
@@ -47,6 +49,7 @@ function drawIsoscelesTriangle() {
     }
     document.getElementById("result3").innerHTML = result
 }
+
 //Vẽ tam giác cân rỗng
 function drawIsoscelesTriangle2() {
     let result = ""
@@ -63,6 +66,7 @@ function drawIsoscelesTriangle2() {
     }
     document.getElementById("result4").innerHTML = result
 }
+
 // Tính lương
 function salaryCalculation() {
     let salary = parseInt(document.getElementById("salary").value)
@@ -78,6 +82,7 @@ function salaryCalculation() {
     }
 
 }
+
 // Kiểm tra nguyên âm
 function vowelCheck() {
     let character = document.getElementById("textInput").value
@@ -100,31 +105,38 @@ function vowelCheck() {
 }
 
 //Xây dựng mảng b là prefix sums của mảng a
-let arrA = []
-
-function submitLength(x) {
-    arrA.length = parseInt(document.getElementById(x).value)
+let arr =[]
+// function nhập chiều dài của mảng
+function submitLength(length, tableId,id) {
+    document.getElementById(id).innerText = "Nhập vào các phần tử của mảng"
+    arr.length = parseInt(document.getElementById(length).value)
     let table = "<tr>"
-    for (let i = 0; i < arrA.length; i++) {
-        table += "<td>" + "<input type='text' style='width: 15px' id='"+i+"'>" + "</td>"
+    for (let i = 0; i < arr.length; i++) {
+        table += "<td>" + "<input type='text' style='width: 15px' id='" + i + "'>" + "</td>"
     }
-    table += "<td><button type='submit' onclick='addValue()'>Nhập</button></td>" +
-        "<td><button type='button' onclick='displayArrB()'>Tìm mảng b</button></td></tr>"
-    document.getElementById("tableTask1").innerHTML = table
+    table += "<td><button type='submit' onclick=addValue()>Nhập</button></td>"
+
+    document.getElementById(tableId).innerHTML = table
 }
 
+//function add value cho mảng
 function addValue() {
-    for (let i = 0; i < arrA.length; i++) {
-        arrA[i] = parseInt(document.getElementById(i).value)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(document.getElementById(i).value)
     }
     alert("Bạn đã nhập xong mảng")
 }
+
+
+
+// function tính toán và hiển thị mảng b
 function displayArrB() {
     let arrB = []
     let c = 0
-    for (let i =0;i<arrA.length;i++){
-        c += arrA[i]
+    for (let i = 0; i < arr.length; i++) {
+        c += arr[i]
         arrB[i] = c
     }
     document.getElementById("arrB").innerText = "Array b = [" + arrB + "]"
 }
+

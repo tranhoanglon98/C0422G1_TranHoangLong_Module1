@@ -58,14 +58,23 @@
 
 <h3>Bài 1:Xây dựng mảng b là prefix sums của mảng a.</h3>
 <p>Nhập chiều dài của mảng a</p>
-<input type="text" placeholder="a length" style="width: 50px" id="aLength">
-<button type="submit" onclick="submitLength('aLength')">Nhập</button>
-<p>Nhập phần tử của mảng a là số nguyên</p>
+<input type="text" placeholder="a length" style="width: 50px" id="aLength"
+       oninput="submitLength('aLength','tableTask1','arr')"
+       onchange="submitLength('aLength','tableTask1','arr')">
+
+<p id="arr"></p>
 <table id="tableTask1"></table>
+<br>
+<td>
+    <button type='button' onclick='displayArrB()'>Tìm mảng b</button>
+</td>
+</tr>
 <p id="arrB"></p>
 <hr>
 <!--                        bài 2                       -->
 <h3>Bài 2: Tìm phần tử xuất hiện trong mảng B nhưng không xuất hiện trong mảng A.</h3>
+
+
 
 </body>
 </html>
