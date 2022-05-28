@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BankAccount {
+        constructor(accountNum, name, bankName, money) {
+            this.accountNum = accountNum
+            this.name = name
+            this.bankName = bankName
+            this.money = money
+        }
+
+        getAccountNum() {
+            return this.accountNum
+        }
+
+        setAccountNum(accountNum) {
+            this.accountNum = accountNum
+        }
+
+        getName() {
+            return this.name
+        }
+
+        setName(name) {
+            this.name = name
+        }
+
+        getBankName() {
+            return this.bankName
+        }
+
+        setBankName(bankName) {
+            this.bankName = bankName
+        }
+
+        getMoney() {
+            return this.money
+        }
+
+        setMoney(money) {
+            this.money = money
+        }
+
+        toString() {
+            document.write("accountNum:" + this.getAccountNum() + "<br>")
+            document.write("Name:" + this.getName() + "<br>")
+            document.write("BankName:" + this.getBankName() + "<br>")
+            document.write("Money:" + this.getMoney() + "<br>" + "<br>")
+        }
+
+    }
+
+    function bankAccountManager() {
+        let list = []
+        let accountNum = ""
+        do {
+            accountNum = prompt("nhập mã tài khoản mới")
+            if (accountNum.length !== 5 || (accountNum / accountNum) !== 1) {
+                alert("mã tài khoản không hợp lệ, nhập lại")
+                alert("mã tài khoản là dãy 5 số")
+            }
+        } while (accountNum.length !== 5 || (accountNum / accountNum) !== 1)
+        console.log(accountNum)
+        let name = prompt("nhập tên khách hàng")
+        let bankName = prompt("nhập tên ngân hàng")
+        let money = prompt("nhập tổng tiền trong tài khoàn")
+        let newAccount = new BankAccount()
+        newAccount.setAccountNum(accountNum)
+        newAccount.setName(name)
+        newAccount.setBankName(bankName)
+        newAccount.setMoney(money)
+        list.push(newAccount)
+        for (let i = 0; i < list.length; i++) {
+            list[i].toString()
+        }
+    }
+
+    bankAccountManager()
+    bankAccountManager()
+</script>
+</body>
+</html>

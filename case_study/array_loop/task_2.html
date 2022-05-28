@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arrA = []
+    let arrB = []
+    let arrC = []
+    arrA.length = +prompt("nhập chiều dài mảng A")//12313215   129925445
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt("arrA[" + i + "] = ?")
+    }
+    arrB.length = +prompt("nhập chiều dài mảng B")
+    for (let i = 0; i < arrB.length; i++) {
+        arrB[i] = +prompt("arrB[" + i + "] = ?")
+    }
+    document.write("Mảng A: [" + arrA + "]" + "<br>")
+    document.write("Mảng B: [" + arrB + "]" + "<br>")
+    for (let i = 0; i < arrB.length; i++) {
+        if ((arrA.indexOf(arrB[i]) === -1) && (arrC.indexOf(arrB[i]) === -1)) {
+            arrC.push(arrB[i])
+        }
+    }
+    document.write("Mảng chứa phần tử của mảng B nhưng không xuất hiện trong mảng A:" + "<br>")
+    document.write("Mảng C: [" + arrC.sort() + "]")
+</script>

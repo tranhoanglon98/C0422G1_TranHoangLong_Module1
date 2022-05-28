@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let string = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
+    let inputNum = prompt("Nhập một số bất kỳ")
+    document.write("Số bạn vừa nhập: " + inputNum + " <==> ")
+    for (let i = 0; i < inputNum.length; i++) {
+        for (let j = 0; j < number.length; j++) {
+            if (parseInt(inputNum[i]) === number[j]) {
+                document.write(string[j] + " ")
+                break
+            }
+        }
+    }
+</script>
+</body>
+</html>

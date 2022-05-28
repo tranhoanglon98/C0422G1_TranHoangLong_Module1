@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào một chuỗi bất kỳ muốn viết tắt")
+    document.write("Chuỗi bạn nhập vào: " + str + "<br>")
+    str.toUpperCase()
+
+    function tranString(str) {
+        str = str.trim()
+        let arrOfString = str.split(" ")
+        let result = []
+        // for (let i = arrOfString.length-1; i >=0; i--) {
+        //     if (arrOfString[i] === "") {
+        //         arrOfString.splice(i,1)
+        //     }
+        // }
+        console.log(arrOfString)
+        if (arrOfString.length === 1){
+            alert("chuỗi chỉ có một từ nên không cần viết tắt")
+        }else {
+            for (let i = 0; i < arrOfString.length; i++) {
+                if (arrOfString[i] !== ""){
+                    result.push(arrOfString[i][0].toUpperCase())
+                }
+            }
+        }
+        return result
+    }
+    document.write("Viết tắt: " + tranString(str).join(""))
+    tranString(str)
+</script>
+</body>
+</html>

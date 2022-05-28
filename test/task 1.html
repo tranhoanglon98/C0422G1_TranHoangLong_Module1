@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let n = 0
+    let sum = 0
+    let count = 0
+    do {
+        n = +prompt("nhập n là số phần tử của mảng (n<=50)")
+        if (n > 50) {
+            alert("n của bạn nhập lớn hơn 50, hãy nhập lại")
+        }
+    } while (n > 50)
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập vào phần tử thứ " + i + " của mảng" + "<br>")
+    }
+    document.write("arr = [ " + arr + " ]")
+    for (let i = 0; i < n; i++) {
+        if ((i % 3 === 0) && (arr[i]) % 5 === 0) {
+            sum += arr[i]
+            a.push(arr[i])
+            count++
+        }
+    }
+    let avg = sum / count
+    document.write("giá trị trung bình của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 là : " + avg)
+</script>
+</body>
+</html>

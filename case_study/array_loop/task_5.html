@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Menu(thơm ngon mời bạn uống nha :D)</h3>
+<button type="submit" onclick="order()">Đặt món</button>
+<p></p>
+<script>
+    let menu = ['Ca fe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa', 'Kết thúc đặt món, tính tiền']
+    let price = [8000, 15000, 12000, 10000, 5000, 10000]
+    for (let i = 0; i < menu.length; i++) {
+        document.write((i + 1) + ". " + menu[i] + "<br>")
+    }
+
+    function order() {
+        let orderItem = 0
+        let total = 0
+        do {
+            orderItem = +prompt("nhập món muốn mua")
+            if (orderItem > 7) {
+                alert("món bạn chon không có trong thực đơn")
+                alert("Tổng tiền cần thanh toán : " + total + " Đồng")
+                alert("hãy đặt lại món khác")
+            }
+            if (orderItem === 7) {
+                alert("Tổng tiền cần thanh toán : " + total + " Đồng")
+                break
+            } else {
+                for (let i = 0; i < price.length; i++) {
+                    if (orderItem === (i + 1)) {
+                        alert("giá tiền " + menu[i] + " là " + price[i] + " Đồng")
+                        let amount = +prompt("nhập số lượng bạn muốn mua")
+                        total += amount * price[i]
+                    }
+                }
+            }
+
+        } while (orderItem <= 7)
+    }
+</script>
+</body>
+</html>

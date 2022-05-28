@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = []
+    let denominators = []
+    let max = 0
+    let index = 0
+    let quantity = +prompt("Nhập số lượng phân số")
+    document.write("Danh sách các phân số: ")
+    for (let i = 0; i < quantity; i++) {
+        numerators[i] = +prompt("Nhập tử số phân số thứ " + (i + 1))
+        denominators[i] = +prompt("Nhập mẫu số phân số thứ " + (i + 1))
+        document.write(numerators[i] + "/" + denominators[i] + ", ")
+        if ((numerators[i] / denominators[i]) > max) {
+            max = numerators[i] / denominators[i]
+            index = i
+        }
+    }
+    document.write("<br>" + "Phân số lớn nhất là " + numerators[index] + "/" + denominators[index] + ", ở vị trí " + index)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập vào xâu ký  tự cần chuẩn hóa")
+    let beforeString = string.split(" ")
+    console.log(beforeString)
+    console.log(typeof beforeString)
+    document.write("Xâu ký tự trước khi chuẩn hóa: " + beforeString.join("&nbsp") + "<br>")
+    for (let i = beforeString.length - 1; i >= 0; i--) {
+        if (beforeString[i] === "") {
+            beforeString.splice(i, 1)
+        } else {
+            beforeString[i] = beforeString[i].toLocaleLowerCase()
+            beforeString[i] = beforeString[i].split("")
+            beforeString[i][0] = beforeString[i][0].toLocaleUpperCase()
+            beforeString[i] = beforeString[i].join("")
+        }
+    }
+    let afterString = beforeString.join(" ")
+    document.write("xâu ký tự sau khi chuẩn hóa: " + afterString)
+</script>
+</body>
+</html>

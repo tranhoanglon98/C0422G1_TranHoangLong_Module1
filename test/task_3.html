@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result = []
+    let arr = []
+    let arrLength = +prompt("Nhập vào chiều dài của màng")
+    for (let i = 0; i < arrLength; i++) {
+        arr[i] = +prompt("Nhập vào phần tử vị trí " + i + " của mảng")
+    }
+    document.write("array = [" + arr + " ]" + "<br>")
+
+    function findFibonacciOfArray(arr) {
+        let arrMax = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > arrMax) {
+                arrMax = arr[i]
+            }
+        }
+        let fibonacci = []
+        let fibonacciNum = 1
+        let j = -1
+        while (fibonacciNum <= arrMax) {
+            fibonacciNum += j
+            j = fibonacciNum - j
+            fibonacci.push(fibonacciNum)
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < fibonacci.length; j++) {
+                if (arr[i] === fibonacci[j]) {
+                    result.push(arr[i])
+                    break
+                }
+            }
+            result.sort(function (a, b) {
+                return a - b
+            })
+        }
+        return result
+    }
+
+    let outputArr = findFibonacciOfArray(arr)
+    document.write("các phần tử thuộc dãy fibonacci trong mảng là :" + outputArr)
+</script>
+</body>
+</html>

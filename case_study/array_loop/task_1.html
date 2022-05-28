@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 1:Xây dựng mảng b là prefix sums của mảng a.</h3>
+<p>Nhập chiều dài của mảng a</p>
+<input type="text" placeholder="a length" style="width: 50px" id="aLength"
+       oninput="submitLength()"
+       onchange="submitLength()">
+
+<p id="arr"></p>
+<table id="tableTask1"></table>
+<br>
+<button type='button' onclick='displayArrB()'>Tìm mảng b</button>
+<p id="arrB"></p>
+</body>
+</html>
+<script>
+    let arr = []
+
+    // function nhập chiều dài của mảng
+
+    function submitLength() {
+        document.getElementById('arr').innerText = "Nhập vào các phần tử của mảng"
+        arr.length = parseInt(document.getElementById('aLength').value)
+        let table = "<tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table += "<td>" + "<input type='text' style='width: 15px' id='" + i + "'>" + "</td>"
+        }
+        table += "<td><button type='submit' onclick=addValue()>Nhập</button></td>" + "</td>" +"</tr>"
+
+        document.getElementById('tableTask1').innerHTML = table
+    }
+
+    //function add value cho mảng
+    function addValue() {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(document.getElementById(i).value)
+        }
+        alert("Bạn đã nhập xong mảng")
+    }
+
+    // function tính toán và hiển thị mảng b
+    function displayArrB() {
+        let arrB = []
+        let c = 0
+        for (let i = 0; i < arr.length; i++) {
+            c += arr[i]
+            arrB[i] = c
+        }
+        document.getElementById("arrB").innerText = "Array b = [" + arrB + "]"
+    }
+
+</script>

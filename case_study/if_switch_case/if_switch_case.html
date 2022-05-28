@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Yêu cầu 2 (if và switch case).</h2>
+<hr>
+<div>
+    <h3>Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng.</h3>
+    <input type="text" placeholder="Nhập lương (VND)" id="salary">
+    <button type="button" onclick="salaryCalculation()">Tính toán</button>
+    <p id="tax">Thuế thu nhập cá nhân:</p>
+    <p id="netSalary">Lương ròng:</p>
+    <hr>
+</div>
+
+
+<div>
+    <h3>Bài 2: Kiểm tra ký tự có phải là nguyên âm không.</h3>
+    <input type="text" placeholder="Nhập ký tự muốn kiểm tra" style="width: 170px;" oninput="vowelCheck()"
+           onchange="vowelCheck()" id="textInput">
+    <p id="result5"></p>
+    <hr>
+</div>
+</body>
+</html>
+<script>
+    // Tính lương
+    function salaryCalculation() {
+        let salary = parseInt(document.getElementById("salary").value)
+        if (salary < 7000000) {
+            document.getElementById("tax").innerText = "Thuế thu nhập cá nhân: " + salary * 0.05 + "Đ"
+            document.getElementById("netSalary").innerText = "Lương ròng: " + (salary - salary * 0.05 + "Đ")
+        } else if (salary < 15000000) {
+            document.getElementById("tax").innerText = "Thuế thu nhập cá nhân: " + salary * 0.1 + "Đ"
+            document.getElementById("netSalary").innerText = "Lương ròng: " + (salary - salary * 0.1 + "Đ")
+        } else {
+            document.getElementById("tax").innerText = "Thuế thu nhập cá nhân: " + salary * 0.2 + "Đ"
+            document.getElementById("netSalary").innerText = "Lương ròng: " + (salary - salary * 0.2 + "Đ")
+        }
+
+    }
+
+    // Kiểm tra nguyên âm
+    function vowelCheck() {
+        let character = document.getElementById("textInput").value
+        switch (character) {
+            case "u" :
+            case "e" :
+            case "o" :
+            case "a" :
+            case "i" :
+            case "U" :
+            case "E" :
+            case "O" :
+            case "A" :
+            case "I" :
+                document.getElementById("result5").innerText = "Ký tự bạn nhập vào là nguyên âm trong tiếng anh!!";
+                break
+            default :
+                document.getElementById("result5").innerText = "Ký tự bạn nhập không phải là nguyên âm trong tiêng anh"
+        }
+    }
+
+</script>
