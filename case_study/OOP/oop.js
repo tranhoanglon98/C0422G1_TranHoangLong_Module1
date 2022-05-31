@@ -1,5 +1,5 @@
-// tạo class Lottery với một thuộc tính là number với number là một mảng số nguyên gồm 6 phần tử
-class Lottery {
+// tạo class LotteryTicket với một thuộc tính là number với number là một mảng số nguyên gồm 6 phần tử
+class LotteryTicket {
     constructor(number) {
         this.number = number
     }
@@ -13,20 +13,20 @@ class Lottery {
     }
 }
 
-// tạo 1 mảng chứa các phần tử là 1 tấm vé(object thuộc class Lottery)
-let loterry = []
+// tạo 1 mảng chứa các phần tử là 1 tấm vé(object thuộc class LotteryTicket)
+let lotteryTickets = []
 
 
 // hàm mua vé, chạy khi người dùng click vào button mua vé
-function buyLottery() {
+function buyLotteryTicket() {
     // điều kiện người dùng chỉ được mua 4 vé
-    if (loterry.length > 3) {
+    if (lotteryTickets.length > 3) {
         alert("Bạn chỉ mua được tối đa 4 vé")
         return
     }
     // tạo object mới là một vé và push vào mảng lottery
-    let newLottery = new Lottery()
-    loterry.push(newLottery)
+    let newLotteryTicket = new LotteryTicket()
+    lotteryTickets.push(newLotteryTicket)
 
     // cho phép người dùng chọn :  tự chọn số hoặc số ngẫu nhiên
     let choose
@@ -44,10 +44,10 @@ function buyLottery() {
             do {
                 // cho người dùng nhập vào số muốn chọn với đk phải là số tử 0 --> 99
                 number[i] = +prompt("chọn số thứ " + (i + 1) + " (0-->99")
-                if (number[i] < 0 || number[i] > 99 || (number[i] / number[i] !== 1 && number[i] !== 0)) {
+                if (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true) {
                     alert("số bạn chọn phải là hai số từ nằm trong khoảng tử 00-->99 \n HÃY NHẬP LẠI")
                 }
-            } while (number[i] < 0 || number[i] > 99 || (number[i] / number[i] !== 1 && number[i] !== 0))
+            } while (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true)
         }
     }
     // trường hợp người dùng chọn vé ngẫu nhiên
@@ -56,12 +56,12 @@ function buyLottery() {
             number[i] = Math.floor(Math.random() * 100)
         }
     }
-    // set thuộc tính number cho obj newLottery với tham số truyền vào là mảng number vối 6 phần tử vửa nhập/tạo ở trên
-    newLottery.setNumber(number)
+    // set thuộc tính number cho obj newLotteryTicket với tham số truyền vào là mảng number vối 6 phần tử vửa nhập/tạo ở trên
+    newLotteryTicket.setNumber(number)
     // in vé vừa mua ra màn hình
     let table = "<tr>"
     for (let i = 0; i < 6; i++) {
-        table += " <td>" + "<button>" + newLottery.getNumber()[i] + "</button>" + "</td>"
+        table += " <td>" + "<button>" + newLotteryTicket.getNumber()[i] + "</button>" + "</td>"
     }
     table += "</tr>"
     document.getElementById("lottery").innerHTML += table
@@ -70,7 +70,6 @@ function buyLottery() {
 // hàm kiểm tra kqxs
 function checkResult() {
     let result = []
-    let count = 0
     let table = "<tr>" + "<th colspan='6'>Kết quả</th>" + "</tr>" + "<tr>"
     // tìm kqxs và truyền vào mảng result
     for (let i = 0; i < 6; i++) {
@@ -80,11 +79,12 @@ function checkResult() {
     table += "</tr>"
     document.getElementById("lottery").innerHTML += table
     // kiểm tra/ so sánh kết quả vừa tìm với vé đã mua
-    for (let i = 0; i < loterry.length; i++) {
-        count = 0
-        for (let j = 6; j > 0; j++) {
-            if (result[i] === loterry[i].getNumber()[i]) {
+    for (let i = 0; i < lotteryTickets.length; i++) {
+        let count = 0
+        for (let j = 5; j >= 0; j--) {
+            if (result[j] === lotteryTickets[i].getNumber()[j]) {
                 count++
+                console.log(count)
             } else {
                 break
             }
@@ -126,6 +126,6 @@ function checkResult() {
 function playAgain() {
     document.getElementById("lottery").innerText = ''
     document.getElementById("result").innerText = ''
-    loterry = []
+    lotteryTickets = []
 }
 

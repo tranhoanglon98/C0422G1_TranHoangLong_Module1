@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTERY</title>
+    <style>
+        div{
+            margin: auto;
+            width: 500px;
+            height: 620px;
+            background-color: darkred;
+            text-align: center;
+            box-shadow: 5px 5px 5px black;
+            color: yellow;
+            padding: 10px;
+        }
+        table{
+            margin: auto;
+        }
+        table button{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        button{
+            border-radius: 15px;
+            background-color: yellow;
+            height: 40px;
+            width: 100px;
+        }
+        button:hover{
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>
+<h1>Mua vé số đê</h1>
+<button onclick="buyTicket()">Mua vé</button>
+<button onclick="checkTicket()">Dò số</button> <br><br>
+<table id="ticket"></table>
+<h4 id="result"></h4>
+</div>
+</body>
+</html>
+<script src="lottery.js"></script>

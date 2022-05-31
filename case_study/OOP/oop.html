@@ -7,12 +7,12 @@
         div {
             margin: auto;
             width: 500px;
-            height: 470px;
+            height: 550px;
             padding: 20px;
-            background-color: darkmagenta;
             text-align: center;
             box-shadow: 5px 5px 5px #000000;
             color: #dddddd;
+            background-color: #CC0000;
         }
 
         table {
@@ -23,31 +23,41 @@
             width: 40px;
             height: 40px;
             border-radius: 20px;
-            border-color: red;
+            border-color: black;
             background-color: yellow;
         }
 
         button {
-            border-radius: 7px;
+            border-radius: 15px;
             background-color: yellow;
+            height: 40px;
+            width: 100px;
         }
 
         button:hover {
             background-color: black;
             color: yellow;
         }
+
+        h2 {
+
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
-<div>
+<div id="div2">
     <h2>Xổ số (mại zô mại zô)</h2>
-    <button id="buy" onclick="buyLottery()">Mua vé</button>
+    <button id="buy" onclick="buyLotteryTicket()">Mua vé</button>
     <button id="check" onclick="checkResult()">Xem kết quả</button>
     <br>
     <br>
     <table id="lottery"></table>
     <h3 id="result"></h3>
 </div>
+
 </body>
 </html>
 <script src="oop.js"></script>
