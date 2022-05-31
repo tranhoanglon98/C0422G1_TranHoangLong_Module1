@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin: auto;
+            width: 500px;
+            height: 470px;
+            padding: 20px;
+            background-color: darkmagenta;
+            text-align: center;
+            box-shadow: 5px 5px 5px #000000;
+            color: #dddddd;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        table tr td button {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border-color: red;
+            background-color: yellow;
+        }
+
+        button {
+            border-radius: 7px;
+            background-color: yellow;
+        }
+
+        button:hover {
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>Xổ số (mại zô mại zô)</h2>
+    <button id="buy" onclick="buyLottery()">Mua vé</button>
+    <button id="check" onclick="checkResult()">Xem kết quả</button>
+    <br>
+    <br>
+    <table id="lottery"></table>
+    <h3 id="result"></h3>
+</div>
+</body>
+</html>
+<script src="oop.js"></script>

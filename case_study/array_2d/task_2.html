@@ -5,6 +5,43 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let arr2d = [[1, 2, 0, 3, 2, 4, 5],
+        [8, 11, 15, 9, 46, 4,],
+        [78, 4, 23, 37, 41],
+        [77, 4, 65, 123]]
 
+    function listsPrimeNum(array) {
+        function checkPrimeNum(number) {
+            let flag = true
+            if (number > 1) {
+                for (let i = 2; i < number; i++) {
+                    if (number % i === 0) {
+                        flag = false
+                        break
+                    }
+                }
+                if (flag) {
+                    console.log(number)
+                    return true
+                }
+            }
+        }
+
+        let result = []
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (checkPrimeNum(array[i][j])) {
+                    result.push(array[i][j])
+                }
+            }
+        }
+        document.write("các phần tử trong mảng là số nguyên tố: " + result + "<br>")
+        document.write("số lượng các phần tử trong mảng là: " + result.length)
+
+    }
+
+    listsPrimeNum(arr2d)
+</script>
 </body>
 </html>

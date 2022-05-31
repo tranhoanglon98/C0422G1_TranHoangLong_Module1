@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr2d = [[1, 2, 0, 3, 2, 4, 5],
+        [8, 11, 15, 9, 46, 4,],
+        [78, 4, 23, 37, 41],
+        [77, 4, 65, -3, 123]]
+    document.write("arr2d = [ ")
+    for (let i = 0; i < arr2d.length; i++) {
+        document.write("[ " + arr2d[i] + " ] ")
+    }
+    document.write(" ]" + "<br>")
+
+    function minMaxOfArray(arr) {
+        let max = arr[0][0]
+        let min = arr[0][0]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j]
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j]
+                }
+            }
+        }
+        result = [min, max]
+        return result
+    }
+
+    let minMax = minMaxOfArray(arr2d)
+    document.write("min = " + minMax[0] + ", max = " + minMax[1])
+</script>
+</body>
+</html>

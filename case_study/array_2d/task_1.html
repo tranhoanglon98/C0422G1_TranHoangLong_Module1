@@ -16,14 +16,14 @@
         arr = []
         for (let j = 0; j < n; j++) {
             arr[j] = +prompt("arr [" + i + "][" + j + "]= ?")
-            if (arr[j] % 2 == 0) {
+            if (arr[j] % 2 === 0) {
                 sum += arr[j]
                 evenNum.push(arr[j])
             }
         }
         array2d[i] = arr
     }
-    alert("array2d = [ [" + array2d.join("] [") + "] ]" + "\n" + "Tổng các phần tử chẵn trong mảng là : " + sum)
+    document.write("array2d = [ [" + array2d.join("] [") + "] ]" + "<br>" + "Tổng các phần tử chẵn trong mảng là : " + sum)
 </script>
 </body>
 </html>

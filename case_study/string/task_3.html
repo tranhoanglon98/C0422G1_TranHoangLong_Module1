@@ -10,15 +10,16 @@
     let str2 = prompt("nhập chuỗi ký tự thứ hai")
     document.write("chuỗi thứ nhất: " + str1 + "<br>")
     document.write("chuỗi thứ hai: " + str2 + "<br>")
-    function commonCharacterCount(s1, s2) {
-        let s = s2.split('')
+    function commonCharacterCount(str1, str2) {
+        let s1  = str1.split('')
+        let s2 = str2.split('')
         let result = []
-        for (let i = 0; i < s1.length; i++) {
-            for (let j = s.length - 1; j >= 0; j--) {
-                if (s1[i] === s[j]) {
-                    result.push(s[j])
-                    s.splice(j, 1)
-                    console.log(s)
+        for (let i = s1.length-1; i>=0; i--) {
+            for (let j = s2.length - 1; j >= 0; j--) {
+                if (s1[i] === s2[j]) {
+                    result.push(s2[j])
+                    s2.splice(j, 1)
+                    s1.splice(i,1)
                 }
             }
         }
