@@ -13,6 +13,7 @@ class LotteryTicket {
     }
 }
 
+
 // tạo 1 mảng chứa các phần tử là 1 tấm vé(object thuộc class LotteryTicket)
 let lotteryTickets = []
 
@@ -28,6 +29,7 @@ function buyLotteryTicket() {
     let newLotteryTicket = new LotteryTicket()
     lotteryTickets.push(newLotteryTicket)
 
+
     // cho phép người dùng chọn :  tự chọn số hoặc số ngẫu nhiên
     let choose
     do {
@@ -38,18 +40,21 @@ function buyLotteryTicket() {
     } while (choose !== 1 && choose !== 2)
     let number = []
 
+
     // trường hợp người dùng chọn tự chọn số
     if (choose === 1) {
         for (let i = 0; i < 6; i++) {
             do {
                 // cho người dùng nhập vào số muốn chọn với đk phải là số tử 0 --> 99
                 number[i] = +prompt("chọn số thứ " + (i + 1) + " (0-->99")
-                if (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true) {
+                if (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true || Number.isInteger(number[i]) === false) {
                     alert("số bạn chọn phải là hai số từ nằm trong khoảng tử 00-->99 \n HÃY NHẬP LẠI")
                 }
-            } while (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true)
+            } while (number[i] < 0 || number[i] > 99 || isNaN(number[i]) === true|| Number.isInteger(number[i]) === false)
         }
     }
+
+
     // trường hợp người dùng chọn vé ngẫu nhiên
     else {
         for (let i = 0; i < 6; i++) {
@@ -66,6 +71,7 @@ function buyLotteryTicket() {
     table += "</tr>"
     document.getElementById("lottery").innerHTML += table
 }
+
 
 // hàm kiểm tra kqxs
 function checkResult() {
@@ -122,7 +128,7 @@ function checkResult() {
     document.getElementById("result").innerHTML += "<button onclick='playAgain()'>Mua lại</button>"
 }
 
-// hàm cho phém mua lại
+// hàm cho phép mua lại
 function playAgain() {
     document.getElementById("lottery").innerText = ''
     document.getElementById("result").innerText = ''

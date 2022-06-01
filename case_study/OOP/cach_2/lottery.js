@@ -13,22 +13,22 @@ class LotteryTicket {
         switch (i) {
             case 0:
                 return this.num1;
-                break
+                break;
             case 1:
                 return this.num2;
-                break
+                break;
             case 2:
                 return this.num3;
-                break
+                break;
             case 3:
                 return this.num4;
-                break
+                break;
             case 4:
                 return this.num5;
-                break
+                break;
             case 5:
                 return this.num6;
-                break
+                break;
         }
     }
 
@@ -56,8 +56,10 @@ class LotteryTicket {
     }
 }
 
+
 // tạo 1 mảng chứa các phần tử là các vé(obj) người dùng mua
 let lottery = []
+
 
 //hàm mua vé
 function buyTicket() {
@@ -66,6 +68,8 @@ function buyTicket() {
         alert("Bạn chỉ được mua tối đa 4 vé")
         return
     }
+
+
     // tạo 1 obj mới(vé) thuôc class LotteryTicket
     let newTicket = new LotteryTicket()
     lottery.push(newTicket)
@@ -77,6 +81,8 @@ function buyTicket() {
             alert("Bạn chỉ được chọn 1 hoặc 2 \n HÃY CHỌN LẠI")
         }
     } while (choose !== 1 && choose !== 2)
+
+
     // hiển thị vé ra màn hình tùy theo lựa chọn của người dùng
     let table = "<tr><th style='width: 80px'>Vé " + lottery.length + " </th>"
     if (choose === 1) {
@@ -95,6 +101,7 @@ function buyTicket() {
     document.getElementById("ticket").innerHTML += table
 }
 
+
 // hàm chọn số khi người dùng chọn choose =1
 function choose(id) {
     let index = id.split("")
@@ -103,10 +110,10 @@ function choose(id) {
     let num
     do {
         num = +prompt("Chọn số từ 0-->99")
-        if ((num < 0 || num > 99) || isNaN(num) === true) {
+        if ((num < 0 || num > 99) || isNaN(num) === true || Number.isInteger(num) === false) {
             alert("Bạn chỉ được chọn số từ 0 --> 99 \n HÃY CHỌN LẠI")
         }
-    } while ((num < 0 || num > 99) || isNaN(num) === true)
+    } while ((num < 0 || num > 99) || isNaN(num) === true || Number.isInteger(num) === false)
     switch (j) {
         case 0: {
             lottery[(i - 1)].setNum(j, num)
@@ -140,6 +147,8 @@ function choose(id) {
             break
     }
 }
+
+
 // hàm kiểm tra kết quả
 function checkTicket() {
     let result = []
@@ -189,6 +198,8 @@ function checkTicket() {
     }
     document.getElementById("result").innerHTML += "<button onclick='playAgain()'>Mua lại</button>"
 }
+
+
 // hàm xuống xác chơi lại lần khác :d
 function playAgain() {
     document.getElementById("ticket").innerText = ''
